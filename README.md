@@ -26,11 +26,11 @@ Estos requisitos pueden ser muy abrumantes para una virtualización, pero es pos
 Estos requisitos son mucho más asequibles para el hardware. Aun así, si se dispone del hardware adecuado para cumplirlos, se recomienda seguir los que ofrece la página oficial.
 
 ### Instalación
-Una ves definido los requisitos se puede proceder con la instalación. Para eso se debe elejir el virtualizador de preferencia, para esta guia se utilizo VMware pero es posible con cualquier virtualizador. 
-QradarCE requiere configuracion previa por parte del virtualizador, ademas de los requisitos previos, para que la instalacion no tenga ningun fallo:
-- Configurar el HardDisk en modo `SATA` ya que la configuracion default que utilizada discos virtualizados pueden generar errores.
-- El adaptador de red debe estar en modo **"Puente"** ya que qradar necesita una ip fija para poder comunicarse con los ortos dispositivos de la red.
+Una vez definido los requisitos se puede proceder con la instalación. Para eso se debe elegir el virtualizado de preferencia, para esta guía se utilizó VMWare, pero es posible con cualquier virtualizador. 
+QradarCE requiere configuración previa por parte del virtualizador, además de los requisitos previos, para que la instalación no tenga ningún fallo:
+- Configurar el HardDisk en modo `SATA`, ya que la configuración default que utilizada discos virtualizados pueden generar errores.
+- El adaptador de red debe estar en modo **"Puente"**, ya que qradar necesita una IP fija para poder comunicarse con los ortos dispositivos de la red.
 
 </br>
 
-Ya con todos los requisito
+Ya con todos los requisito listos se puede iniciar con la instalación
