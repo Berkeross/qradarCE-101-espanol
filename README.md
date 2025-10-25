@@ -18,7 +18,7 @@ QradarCE, al ser un SIEM todo en uno, tiene unos requisitos muy demandantes para
 
 Estos requisitos pueden ser muy abrumantes para una virtualización, pero es posible acotarlos y mantener el rendimiento de la VM. Estos requisitos son los que **YO** considero mínimos para una utilización de qradar básica sin llevar a los límites el sistema:
 - 8-12 GB de RAM
-- 200 GB de espacio en disco
+- 100-150 GB de espacio en disco
 - 4-6 núcleos de procesador
 
 </br>
