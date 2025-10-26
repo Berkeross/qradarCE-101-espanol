@@ -33,4 +33,21 @@ QradarCE requiere configuración previa por parte del virtualizador, además de 
 
 </br>
 
-Ya con todos los requisito listos se puede iniciar con la instalación
+Ya con todos los requisitos listos se puede iniciar con la instalación, esta toma aproximadamente unos 40-60 mins, ya que no es necesario preinstalar un sistema operativo previamente. QradarCE en la versión 7.5 y todo el SIEM está levantado sobre RedHat 8.10 como sistema operativo.
+
+Durante la descarga, por lo que se mencionó anteriormente, la instalación se reinicia 3 veces. Aunque no lo parezca, es una buena señal porque el instalador necesita aplicar cambio, además de descargar el sistema operativo y el propio SIEM. 
+
+ Llegado a un punto del tercer reinicio se va a solicitar un `LocalHost login:` donde hay que iniciar sesión con el usuario `root`. Pasado unos segundos después de ingresar con el usuario root aparecerá una página de términos y condiciones los cuales se deben aceptar.
+
+Cuando se aceptan los términos y condiciones se va a visualizar el “appliance install”, en esta es necesario elegir la segunda opción, siendo esta la de `software install`, en la siguiente pestaña elegir `"all-in-one" console`, la tercer pestaña se deja en Normal setup, en la cuarta se elige la fecha, en la quinta y sexta se elige la región, en la séptima pestaña se deja la opción IPv4, en la octava se selecciona la interfaz (debería aparecer una sola), en la novena pestaña se debe fijar en que dirección se va a alijar la interfaz web, para esto, se debe elegir un hostname a nivel local para poder ingresar (Como `qradar.local.com` o `qradar.localhost`), la `IP Address` va a ser la IP fija que se va a utilizar, tené en cuenta que tiene que estar dentro del rango de IP de tu red local, luego llenar la máscara de sub-red, el gateway y un DNS primario. Con todos estos datos ya se puede dar a siguiente.
+
+Después de que qradar finalicé la configuración de la network, te pedirá una contraseña para el usuario admin, esta tiene que tener como mínimo 5 caracteres **no especiales**. Con el usuario admin configurado el sistema tiene que hacer las últimas configuraciones (las cuales toma aproximadamente 10-15 min). 
+
+Una vez finalizada la configuración te dará acceso a la CLI del usuario `root`, en esta para verificar si se instaló correctamente se puede utilziar el siguiente comando:
+
+```bash
+/opt/qradar/bin/myver -v
+```
+
+Este comando mostrará información de la versión instalad, si esta coincide con la del archivo .iso, la instalación se puede dar por finalizada.
+
