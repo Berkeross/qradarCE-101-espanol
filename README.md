@@ -5,13 +5,12 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
 
 ### indice
 
-* [Descarga, Prerrequisitos, Instalación y Ejecución](#Descarga, Prerrequisitos, Instalación y Ejecución)
-* [Prerrequisitos](#Prerrequisitos)
-* [⚙️ Configuración Avanzada](#configuracion-avanzada)
-* [🤝 Contribución](#contribucion)
-* [📜 Licencia](#licencia)
+* [Descarga, Prerrequisitos, Instalación y Ejecución](#Descarga-Prerrequisitos-Instalación-Ejecución)
+  * [Prerrequisitos](#Prerrequisitos)
+  * [Instalación](#Instalación)
+* [Configuración](#Configuración)
 
-# Descarga, Prerrequisitos, Instalación y Ejecución
+# Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
 Una vez en la página se debe descargar el archivos `.ISO` más el archivo para poder extender la licencia, el cual finaliza con la extensión `.key`.
 Ya con esos dos archivos descargados se puede pasar a los prerrequisitos y la instalación.
