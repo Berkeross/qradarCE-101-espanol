@@ -6,9 +6,9 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
 ### indice
 
 * [Descarga, Prerrequisitos, Instalación y Ejecución](#Descarga-Prerrequisitos-Instalación-Ejecución)
-  * [Prerrequisitos](#Prerrequisitos)
-  * [Instalación](#Instalación)
-* [Configuración](#Configuración)
+  * [Prerrequisitos](###Prerrequisitos)
+  * [Instalación](###Instalación)
+* [Configuración](##Configuración)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
@@ -58,7 +58,7 @@ Una vez finalizada la configuración te dará acceso a la CLI del usuario `root`
 
 Este comando mostrará información de la versión instalad, si esta coincide con la del archivo .iso, la instalación se puede dar por finalizada.
 
-# Configuración
+## Configuración
 
 Una vez terminada la instalación, es momento de ingresar a la interfaz web de qrdadarCE desde cualquier endpoint de la red interna. Esta interfaz se va a encontrar ingresando la dirección IPv4 (configurada anteriormente) en el buscador de preferencia, cuando se intente ingresar por primera vez, el buscador te va a informar que el certificado **SSL** no está validado y el buscador te va a avisar que la página puede no ser segura, aun así, debajo elija la opción de “ingresar igualmente”. 
 
