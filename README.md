@@ -5,7 +5,7 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
 
 ### indice
 
-* [Descarga, Prerrequisitos, Instalación y Ejecución](#instalacion)
+* [Descarga, Prerrequisitos, Instalación y Ejecución](#Descarga, Prerrequisitos, Instalación y Ejecución)
 * [Prerrequisitos](#Prerrequisitos)
 * [⚙️ Configuración Avanzada](#configuracion-avanzada)
 * [🤝 Contribución](#contribucion)
