@@ -3,6 +3,14 @@ Repositorio explicativo donde se aborda toda la interfaz de qradarCE 7.5 junto a
 
 QradarCE es la versión dedicada a la comunidad (community edition) de la plataforma de seguridad SIEM de IBM. Esta fue creada para tener una forma gratuita de desarrollar y probar las capacidades del sistema. Por obvias razones qradarCE esta limita en comparación a la versión Enterprise SIEM, aun así qradarCE permite tener un vistazo completo a casi todo lo que puede ofrecer el sistema y en eso se va a basar este repositorio.
 
+### indice
+
+* [Descarga, Prerrequisitos, Instalación y Ejecución](#instalacion)
+* [Prerrequisitos](#Prerrequisitos)
+* [⚙️ Configuración Avanzada](#configuracion-avanzada)
+* [🤝 Contribución](#contribucion)
+* [📜 Licencia](#licencia)
+
 # Descarga, Prerrequisitos, Instalación y Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
 Una vez en la página se debe descargar el archivos `.ISO` más el archivo para poder extender la licencia, el cual finaliza con la extensión `.key`.
@@ -50,4 +58,16 @@ Una vez finalizada la configuración te dará acceso a la CLI del usuario `root`
 ```
 
 Este comando mostrará información de la versión instalad, si esta coincide con la del archivo .iso, la instalación se puede dar por finalizada.
+
+# Configuración
+
+Una vez terminada la instalación, es momento de ingresar a la interfaz web de qrdadarCE desde cualquier endpoint de la red interna. Esta interfaz se va a encontrar ingresando la dirección IPv4 (configurada anteriormente) en el buscador de preferencia, cuando se intente ingresar por primera vez, el buscador te va a informar que el certificado **SSL** no está validado y el buscador te va a avisar que la página puede no ser segura, aun así, debajo elija la opción de “ingresar igualmente”. 
+
+Esto se debe a que qradar genera un certificado SSL propio para poder utilizar TLS dentro de la red local y el buscador te da un aviso de que la página no tiene una certificación SSL emitida por una agencia certificadora.
+
+Dentro de la página de login se te va a solicitar que ingreses un usuario y contraseña, aquí se debe ingresar con el usuario `admin` y la contraseña debe ser la ingresada en la que se configuró en la instalación.
+
+Luego de darle logearte qradar solicitara que cambies nuevamente la contraseña, esta contraseña va a ser la contraseña definitiva para el usuario admin.
+
+Una vez dentro te vas a encontrar con el **dasboard**
 
