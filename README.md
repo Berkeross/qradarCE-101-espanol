@@ -66,7 +66,24 @@ Esto se debe a que qradar genera un certificado SSL propio para poder utilizar T
 
 Dentro de la página de login se te va a solicitar que ingreses un usuario y contraseña, aquí se debe ingresar con el usuario `admin` y la contraseña debe ser la ingresada en la que se configuró en la instalación.
 
-Luego de darle logearte qradar solicitara que cambies nuevamente la contraseña, esta contraseña va a ser la contraseña definitiva para el usuario admin.
+Luego de darle a login, qradar solicitara que cambies nuevamente la contraseña, esta contraseña va a ser la contraseña definitiva para el usuario admin. La siguiente pestaña que aparece es el license agreement, el cual hay que aceptar.
 
-Una vez dentro te vas a encontrar con el **dasboard**
+Una vez dentro te vas a encontrar con el **dashboard** junto con un mensaje que informa que la licencia temporal expira al cabo de unos días.
 
+### Licencia
+
+Para poder expandir la licencia hay que dirigirse a la pestaña “admin” y seleccionar la opción “system and license management”, dentro de esa pestaña va a aparecer la única licencia activa junto a la versión de qradar y la fecha de expiración. 
+
+Una vez dentro, seleccione la opción “upload license” en la parte superior izquierda, dentro selecciona un archivo, este tiene que ser el archivo `.key` descargado anteriormente y luego darle a “upload file”.
+
+Luego de subir el archivo hay que dirigirse al  centro de la pestaña y en el desplegable “displey” seleccionar la opción “licenses”. Ahora en la licencia va a aparecer un símbolo de más`(+)` en la parte derecha de la licencia que al darle clic se va a expandir mostrando todas las licencias junto a la que se agregó con un texto “license status: Unallocated”.
+
+una vez vista la licencia sin asignar, hay que seleccionarla con clic derecho y darle al botón de “allocate system to license”.
+
+Luego de asignar la licencia es necesario desplegarla, para esto vuelve a la psetaña de admin y donde aparece el cartel amarillo informando que hay opciones por implementar, expande los detalles para ver más información y luego dale al botón de “deply changes”. Después de que se apliquen los cambios hay que volver “system and license management” para modificar los pools de la licencia.
+
+Al ser una licencia de la comunidad, está limitada en la cantidad de eventos por minuto y el volumen de datos por minutos y como el sistema no identifica que licencia se aplica en el sistema es necesario modificarlos manualmente para que la licencia no se bloquee.
+
+Para esto dentro del panel de system and license management hay que cliquear la licencia que se activó anteriormente y dirigirse a “license pool management”, aquí aparecerá en rojo mostrando que está excedido del límite de la licencia. Para poder modificarlo, selecciona la licencia que está debajo dele gráfico y en la opción “allocated EPS” cámbialo a 100 y en “allocated FPM” a 5000, y darle a SAVE, con eso en el gráfico van a aparecer en ambos 0, esto significa que se configuró.
+
+Para verificar que está bien configurado, diríjase a “log activity”, si esta pestaña aparecen logs significa que se configuro satisfactoriamente.
