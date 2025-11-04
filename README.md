@@ -11,6 +11,7 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
 * [Configuración](#Configuración)
   * [Licencia](#Licencia)
 * [Qrdar UI](#Qrdar-UI)
+* [Admin](#Admin)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
