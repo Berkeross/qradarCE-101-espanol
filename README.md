@@ -156,14 +156,14 @@ Dentro de esta pestaña se divide en diferentes secciones para la configuracion.
 
 | Sección  | Función Principal  |  Funciónes que trae |
 |----------|--------------------|---------------------|
-| System Configuration | Gestión de la salud, rendimiento y mantenimiento de la Consola de QRadar y sus datos. | Auto Update, Backup and Recovery, Index Management, Aggregated Data Management, Custom Offense Close Reasons, Store and Forward, Reference Set Management, Centralized Credentials, Email Server Management. |
-| User Management | Control de acceso, roles y permisos de los usuarios que interactúan con QRadar. | Users, User Roles, Security Profiles, Authentication, Autorized services, Tenant management. |
+| System Configuration | Gestión de la salud, rendimiento y mantenimiento de la Consola de QRadar. | Auto Update, Backup and Recovery, Index Management, Aggregated Data Management, Custom Offense Close Reasons, Store and Forward, Reference Set Management, Centralized Credentials, Email Server Management. |
+| User Management | Control de acceso, roles y permisos de los usuarios de QRadar. | Users, User Roles, Security Profiles, Authentication, Autorized services, Tenant management. |
 | Forensics | Configuración de las herramientas para la recolección y el análisis posterior a un incidente. | Server Management, Case management, Forensic user permissions, Schedule actions, Suspect content management. |
-| Assets | Configuración de cómo QRadar descubre y mantiene el inventario de activos de la red. | Custom Asset Properties, Asset Profiler Configuration, Manage identify exclusion |
-| Data Sources | Configuración y ajuste de los módulos que QRadar usa para recibir, analizar y entender los datos de logs y flujos. | --- |
+| Assets | Configuración de cómo QRadar mantiene los activos de la red. | Custom Asset Properties, Asset Profiler Configuration, Manage identify exclusion |
+| Data Sources | Configuración y ajuste de los módulos que QRadar que se usa para recibir y analizar los datos de los logs. | --- |
 | Events | Configuración del soporte para los logs. | DSM Editor, WinCollect, Log source(Extensions, Group, Parsing Ordering), Custom event properties, Event retention y Data obfuscation management |
-| Flows | Configuración del soporte para los flujos de red | Flow sources, Flow sources aliases, Custom flow propierties, Flow retention |
-| Custom Actions | Definición de acciones de respuesta automatizadas que QRadar puede tomar cuando se activa una regla de ofensa. | Define Actions (Crear scripts o llamadas a APIs) |
+| Flows | Configuración del soporte para los flujos de red. | Flow sources, Flow sources aliases, Custom flow propierties, Flow retention |
+| Custom Actions | Definición de acciones de respuesta automatizadas que QRadar puede tomar cuando se activa una regla. | Define Actions (Crear scripts o llamadas a APIs) |
 | Vulnerability | Configuración de los escáneres que detectan y reportan vulnerabilidades de la red. | VA Scanners y Schedule VA Scanners (Una sirve par configurar escáneres y la otra para programar ejecuciones periódicas) |
 | Dynamic Search | Configuración de la funcionalidad de búsqueda dinámica avanzada, que permite búsquedas personalizadas sobre el contexto y metadatos de los datos. | Como su nombre indica funciona para la configuración de parámetros y vistas para la búsqueda dinámica |
 | Remote Networks and Services Configuration | Definición de las redes y los servicios externos a la red principal para que QRadar los clasifique correctamente. | Esta seccion crear y gestionar las definiciones de redes externas y servicios conocidos. |
