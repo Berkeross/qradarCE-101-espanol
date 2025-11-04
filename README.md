@@ -87,3 +87,83 @@ Al ser una licencia de la comunidad, está limitada en la cantidad de eventos po
 Para esto dentro del panel de system and license management hay que cliquear la licencia que se activó anteriormente y dirigirse a “license pool management”, aquí aparecerá en rojo mostrando que está excedido del límite de la licencia. Para poder modificarlo, selecciona la licencia que está debajo dele gráfico y en la opción “allocated EPS” cámbialo a 100 y en “allocated FPM” a 5000, y darle a SAVE, con eso en el gráfico van a aparecer en ambos 0, esto significa que se configuró.
 
 Para verificar que está bien configurado, diríjase a “log activity”, si esta pestaña aparecen logs significa que se configuro satisfactoriamente.
+
+# Qrdar UI
+
+### Dashboard
+
+El dashboard de qradar es la primera pestaña que aparece y la más sencilla de configurar. Proporciona un entorno de trabajo con información resumida y detallada sobre el estado de la seguridad de la red. Esta viene con 7 pre sets, cada una con una temática diferente (Network, application, risk, etc.). También existe la posibilidad de crear tu propio dashboard y configurarlo a tu manera, con la posibilidad de borrar y renombrar el dashboard.
+
+El mayor juego que tiene esta pestaña es la opción “add item” donde se pueden modificar los pre sets creados, en estos se puede agregar todo tipo de gráficos preseteados como Gráficos, diagramas, listas y monitores personalizables que muestran métricas clave.
+
+Dato no menor, el idioma de UI de Qradar se ajusta al idioma que tenga de forma predeterminada el navegador que se utilize.
+
+### Offenses
+
+La pestaña Offenses muestra las alertas de seguridad generadas por el motor de correlación de QRadar cuando una regla detecta una actividad sospechosa o maliciosa. En Offenses se puede visualizar los incidentes que tomo tu usuario, como, todos los incidentes. Además de tener la posibilidad de filtrarlos por IP de origen o de destino, por red o por regla. 
+
+Qradar integra este sistema de tiketing que permite investigar, asignar, comentar, cerrar y priorizar las alertas de seguridad. Cada "delito" es una colección de eventos y flujos relacionados.
+
+### Log Activity
+
+La pestaña Log Activity permite ver y buscar en tiempo real los logs que se envían a QRadar desde todos los orígenes de datos como: firewalls, servidores, aplicaciones, etc.
+
+Esta es una lista de eventos brutos pero Qradar ofrece un potente motor de búsqueda y filtrado para investigar eventos específicos o patrones de eventos Incluyendo gráficos de series temporales configurables.
+
+### Network Activity
+
+La péstaña Network Activity es muy similar a **Log Activity**, pero se centra en los flujos de red. En esta pestaña se lista el flujos de red, permitiendo investigar el tráfico de red, buscar conexiones específicas, volúmenes de datos, protocolos utilizados y otra información de sesión.
+
+### Assets
+
+La pestaña Assets descubre automaticamente y mantiene una base de datos de los activos de la red local. Dentro de cada activo hay información detallada, incluyendo su sistema operativo, servicios y la actividad de red y eventos asociados.
+
+### Reports
+
+La pestaña de reportes sirve para la creación y gestión de informes**.** Se utiliza para generar, distribuir y gestionar informes periódicos sobre los datos en QRadar, estos dependiendo de la configuracion se generan diariamente o mensualmente.
+
+La pestaña tiene un listado de informes y informes generados previamente, ademas de opciones para crear informes personalizados.
+
+### Risk
+
+Esta pestaña es un modulo que actua por separado,  el modulo “Risk Manager” que en Qradar la pestaña es llamada “risk” se utilzia para modelar, priorizar y gestionar los riesgos de seguridad y cumplimiento.
+
+Este modulo es una herramienta para supervisar los dispositivos, simular cambios en la red, visualizar la topología y evaluar el riesgo. Esta pestaña es utilizada para hacer cumplir las politicas de seguridad. 
+
+Este modulo ni viene instalado de forma predeterminada en Qradar.
+
+### Vulnerabilities
+
+La pestaña vulneravilities tambien es un modulo este llamado “QRadar Vulnerability Manager”, que, se enfoca en identificar y priorizar las vulnerabilidades en los activos.
+
+Este es un sistema semiautomatico que explora la red para identificar vulnerabilidades en aplicaciones, sistemas y dispositivos, tambien, integra datos de escáneres de terceros.
+
+### **Log Sources**
+
+La pestaña log source es una de las mas importantes ya que en esta se agregan todos los assets y endpoints de los cuales salen los logs visualizados en log activity.
+Log source permite elegir que tipo de “source” entre sistemas operativos y diferentes opcciones de de servicios.
+
+Esta pestaña es una extención que se agrega desde “Extensions Management” en la pestaña Admin.
+
+## Admin
+
+La pestaña admin es donde se realizan las tareas de mantenimiento y gestion de qradar. Gran parte de toda la configuracion del SIEM viene de esta pestaña como: La configuración de orígenes de registro (Log Sources), gestión de usuarios y roles de seguridad, configuración del sistema, gestión de licencias, ajustes de red, copias de seguridad, y despliegue de cambios, entre otras muchas cosas. Dentro de esta pestaña tambien aparecen todas aquellas extensiones que se agreguen.
+
+Dentro de esta pestaña se divide en diferentes secciones para la configuracion.
+
+| Sección  | Función Principal  |  Funciónes que trae |
+|----------|--------------------|---------------------|
+| System Configuration | Gestión de la salud, rendimiento y mantenimiento de la Consola de QRadar y sus datos. | Auto Update, Backup and Recovery, Index Management, Aggregated Data Management, Custom Offense Close Reasons, Store and Forward, Reference Set Management, Centralized Credentials, Email Server Management. |
+| User Management | Control de acceso, roles y permisos de los usuarios que interactúan con QRadar. | Users, User Roles, Security Profiles, Authentication, Autorized services, Tenant management. |
+| Forensics | Configuración de las herramientas para la recolección y el análisis posterior a un incidente. | Server Management, Case management, Forensic user permissions, Schedule actions, Suspect content management. |
+| Assets | Configuración de cómo QRadar descubre y mantiene el inventario de activos de la red. | Custom Asset Properties, Asset Profiler Configuration, Manage identify exclusion |
+| Data Sources | Configuración y ajuste de los módulos que QRadar usa para recibir, analizar y entender los datos de logs y flujos. | --- |
+| Events | Configuración del soporte para los logs. | DSM Editor, WinCollect, Log source(Extensions, Group, Parsing Ordering), Custom event properties, Event retention y Data obfuscation management |
+| Flows | Configuración del soporte para los flujos de red | Flow sources, Flow sources aliases, Custom flow propierties, Flow retention |
+| Custom Actions | Definición de acciones de respuesta automatizadas que QRadar puede tomar cuando se activa una regla de ofensa. | Define Actions (Crear scripts o llamadas a APIs) |
+| Vulnerability | Configuración de los escáneres que detectan y reportan vulnerabilidades de la red. | VA Scanners y Schedule VA Scanners (Una sirve par configurar escáneres y la otra para programar ejecuciones periódicas) |
+| Dynamic Search | Configuración de la funcionalidad de búsqueda dinámica avanzada, que permite búsquedas personalizadas sobre el contexto y metadatos de los datos. | Como su nombre indica funciona para la configuración de parámetros y vistas para la búsqueda dinámica |
+| Remote Networks and Services Configuration | Definición de las redes y los servicios externos a la red principal para que QRadar los clasifique correctamente. | Esta seccion crear y gestionar las definiciones de redes externas y servicios conocidos. |
+| Apps | Funcionalidades de importación relacionadas con los módulo importados | En esta seccion aparecen las extensiones de las funciones importadas. |
+
+
