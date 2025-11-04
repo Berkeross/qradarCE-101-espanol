@@ -169,4 +169,5 @@ Dentro de esta pestaña se divide en diferentes secciones para la configuracion.
 | Remote Networks and Services Configuration | Definición de las redes y los servicios externos a la red principal para que QRadar los clasifique correctamente. | Esta seccion crear y gestionar las definiciones de redes externas y servicios conocidos. |
 | Apps | Funcionalidades de importación relacionadas con los módulo importados | En esta seccion aparecen las extensiones de las funciones importadas. |
 
+# Casos de uso
 
