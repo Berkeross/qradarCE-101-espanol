@@ -12,6 +12,9 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
   * [Licencia](#Licencia)
 * [Qrdar UI](#Qrdar-UI)
 * [Admin](#Admin)
+* [casos de uso](#casos-de-uso)
+  * [Integración de log source para la ingesta de Datos de Windows](#Integración-de-log-source-para-la-ingesta-de-Datos-de-windows)
+  * [Integración de log source para la ingesta de Datos de Linux](#Integración-de-log-source-para-la-ingesta-de-Datos-de-Linux)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
@@ -171,7 +174,7 @@ Dentro de esta pestaña se divide en diferentes secciones para la configuracion.
 
 # Casos de uso
 
-### Integración de log source para la ingesta de Datos de windows
+### Integración de log source para la ingesta de Datos de Windows
 
 Uno de los primeros casos de uso es integrar datos de un endpoint windows, qradar lo permite hacer de muchas maneras diferentes, pero en este caso solo utilizaremos una de las más sencillas que es el uso de un software de la suite de IBM para conectar el endpoint al SIEM.
 
@@ -195,7 +198,7 @@ Luego elegir el “destination” configurado anteriormente y por último aplica
 
 Con esto los logs elegidos deberían estar llegando a Qradar directamente y los verás en la pestaña de “log activity”.
 
-### Integración de log source para la ingesta de Datos de windows
+### Integración de log source para la ingesta de Datos de Linux
 
 La integración de los de Linux es un poco más sencillo. Para esto es necesario modificar el archivo rsyslog.conf para enviar todos los logs del sistema a Qradar. Para modificar el archivo hay que entrar directamente al sistema linux o directamente por ssh, luego modificar el archivo usando el comando `sudo nano /etc/rsyslog.conf`, luego en el final del archivo hay que ingresar la sintaxis “`*.* @<IP.DE.QRADAR>:514`”, luego guardar, salir y reiniciar el servicio rsyslog con el comando `systemctl restart rsyslog`. Con esto es necesario esperar aproximadamnetnte 15 minutos para que Qradar pueda detectar los logs de Linux.
 
