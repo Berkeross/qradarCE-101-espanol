@@ -171,4 +171,36 @@ Dentro de esta pestaña se divide en diferentes secciones para la configuracion.
 
 # Casos de uso
 
+### Integración de log source para la ingesta de Datos de windows
+
+Uno de los primeros casos de uso es integrar datos de un endpoint windows, qradar lo permite hacer de muchas maneras diferentes, pero en este caso solo utilizaremos una de las más sencillas que es el uso de un software de la suite de IBM para conectar el endpoint al SIEM.
+
+Este software que se va a utilizar se llama WinCollect. Este se va a encargar de mandar los logs elegidos a qradar mediante una conexión TCP.
+
+El primer paso para esto es necesario [descargarlo](https://www-ibm-com.translate.goog/community/101/qradar/wincollect10/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc) desde la página principal, allí se va a elegir la arquitectura del sistema operativo y se va a descargar. Una vez descargado se va a instalar como administrador.
+
+En la pestaña de instalación hay que aceptar los términos y condiciones, después elegir la opción de instalación rápida, en la pestaña donde se pide el hostname de Qradar hay que poner la dirección IP donde está alojado el SIEM.
+
+Mientras se instala aparecerá una pestaña que pregunta si estás de acuerdo con que Wincollect pueda hacer cambios en el equipo, en esta pestaña hay que darle en el botón de aceptar y esperar a que se termine de instalar.
+
+Una vez finalizado se puede ingresar a la consola usando la URL “localhost:3000”. En este lugar se van a crear los sources y conectar y verificar la conexión con Qradar.
+
+ Dentro de la consola lo primero que hay es necesario hacer es verificar la conexión con Qradar, para esto hay que dirigirse a la pestaña “destinations” que se encuentra en la parte superior izquierda dentro del menú desplegable.
+
+ Para esto hay que crear una destinación (si es que no hay) con la dirección IP de Qradar y utilizar un port 514 por el protocolo TCP, y, luego de configurarlo, utilizar el botón “test” y verificar la conexión.
+
+Con la conexión realizada crear un Source con el botón azul en la parte superior. Aquí elegiremos una source local, en la sección “Group Source” vas a crear un nuevo grupo con el nombre que quieras, luego se van a elegir los logs a enviar que en este caso serias los de “Windows events”, y en este se van a seleccionar los siguientes 3 logtypes: application, system y security.
+
+Luego elegir el “destination” configurado anteriormente y por último aplicar los cambios y confirmar.
+
+Con esto los logs elegidos deberían estar llegando a Qradar directamente y los verás en la pestaña de “log activity”.
+
+### Integración de log source para la ingesta de Datos de windows
+
+La integración de los de Linux es un poco más sencillo. Para esto es necesario modificar el archivo rsyslog.conf para enviar todos los logs del sistema a Qradar. Para modificar el archivo hay que entrar directamente al sistema linux o directamente por ssh, luego modificar el archivo usando el comando `sudo nano /etc/rsyslog.conf`, luego en el final del archivo hay que ingresar la sintaxis “`*.* @<IP.DE.QRADAR>:514`”, luego guardar, salir y reiniciar el servicio rsyslog con el comando `systemctl restart rsyslog`. Con esto es necesario esperar aproximadamnetnte 15 minutos para que Qradar pueda detectar los logs de Linux.
+
+Pasado un tiempo, si Qradar no detecta los logs de Linux es posible agregarlos usando los Logs Source. Para esto hay que ingresar un “simple log” y buscar Linux OS y luego Syslog. Aquí hay que rellenar las secciones obligatorias y luego ingresar la IP o el dominio de Endpoint donde está el sistema operativo Linux. 
+
+Para poder verificar la llegada de logs es posible enviar un log de pureva desde el sistema operativo utilizando el comando “logger test”.
+
 
