@@ -15,6 +15,7 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
 * [casos de uso](#casos-de-uso)
   * [Integración de log source para la ingesta de Datos de Windows](#Integración-de-log-source-para-la-ingesta-de-Datos-de-windows)
   * [Integración de log source para la ingesta de Datos de Linux](#Integración-de-log-source-para-la-ingesta-de-Datos-de-Linux)
+  * [Tratamiento de una Alerta](#Tratamiento-de-una-Alerta)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
@@ -205,5 +206,31 @@ La integración de los de Linux es un poco más sencillo. Para esto es necesario
 Pasado un tiempo, si Qradar no detecta los logs de Linux es posible agregarlos usando los Logs Source. Para esto hay que ingresar un “simple log” y buscar Linux OS y luego Syslog. Aquí hay que rellenar las secciones obligatorias y luego ingresar la IP o el dominio de Endpoint donde está el sistema operativo Linux. 
 
 Para poder verificar la llegada de logs es posible enviar un log de pureva desde el sistema operativo utilizando el comando “logger test”.
+
+### Tratamiento de una Alerta
+
+Una alerta es un evento que, según las reglas de qradar, son de gravedad, separándola de las demás y colocándola en la pestaña “Offenses” para ser tratadas, pero, para tratar una alerta, primero hay que generarla.
+
+Para esto es posible generar una alerta de grado medio, estos grados de alerta van del 7 (media  prioridad) al 10 (máxima prioridad). Lo primero es tener acceso a la máquina Windows utiliza para conectarse a Qradar con Wincollect, vamos a utilizar comandos de powershell para hacer pensar a Qradar que un malware está intentando abrir cmd repetidas veces con el usuario admin y credenciales erróneas.
+
+Lo primero es abrir Powershell como usuario o administrador y utilizar el siguiente comando `runas /user:Administrador cmd.exe`, este se tiene que repetir reiteradas veces, con unas 10 seguramente alcanzó con un lapso de 2 segundos por cada repetición, además de ingresar credenciales erróneas adrede.
+
+Con esto WinCollect detecta los logs de seguridad y los envía a Qradar para que este al ver el patrón lo envía a la pestaña Offenses para su tratamiento.
+
+Una vez teniendo la Alerta en esta pestaña lo primero es asignarla a un usuario, en este caso que no tenemos creado ningún usuario se lo vamos a asignar al usuario admin, entrando a la alerta con doble click y en la sección “asigned to” y elegir el usuario con el cual se va a resolver la alerta.
+
+Una vez que el usuario asignado accede a los detalles de la alerta, tiene a disposición las herramientas para la contextualización y la documentación del incidente.
+
+| Sección | Propósito y Utilidad  |
+| --- | --- |
+| Notes (Notas) | Documentación de los hallazgos durante la investigación. Evidencia recolectada, manteniendo un registro de auditoría. |
+| Searches (Búsquedas) | Almacena y registra las búsquedas guardadas. Permite recrear rápidamente su proceso de investigación o compartir búsquedas útiles. |
+| Source IP & Destination IP | Identificación de los actores. Sirve como punto de partida para pivotar, se puede verde que  Assets es la IP o buscar su actividad en Log Activity. |
+| Log Sources | Muestra todos los dispositivos. Permite auditados externamente para encontrar la causa raíz. |
+| Users | Muestra los usuarios de red que están asociados con las IP. Ayuda a determinar si el incidente es un ataque externo o interno. |
+| Contributing Events/Flows | Muestra los eventos y flujos. Es la evidencia principal revisando el timestamp y el payload de estos logs para confirmar la validez de la alerta. |
+| Assets Involved | Muestra los activos ue QRadar ha identificado como involucrados en la ofensa. Proporciona contexto del activo. |
+| Rule List (Lista de Reglas) | Muestra las reglas de correlación específicas que fueron violadas para generar la ofensa. |
+| Policy/Compliance | Muestra si la ofensa se relaciona con alguna política de cumplimiento. |
 
 
