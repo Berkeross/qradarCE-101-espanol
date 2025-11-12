@@ -223,14 +223,14 @@ Una vez que el usuario asignado accede a los detalles de la alerta, tiene a disp
 
 | Sección | Propósito y Utilidad  |
 | --- | --- |
-| Notes (Notas) | Documentación de los hallazgos durante la investigación. Evidencia recolectada, manteniendo un registro de auditoría. |
-| Searches (Búsquedas) | Almacena y registra las búsquedas guardadas. Permite recrear rápidamente su proceso de investigación o compartir búsquedas útiles. |
-| Source IP & Destination IP | Identificación de los actores. Sirve como punto de partida para pivotar, se puede verde que  Assets es la IP o buscar su actividad en Log Activity. |
+| Notes | Documentación de los hallazgos durante la investigación. Evidencia recolectada, manteniendo un registro de auditoría. |
+| Searches | Almacena y registra las búsquedas guardadas. Permite recrear rápidamente su proceso de investigación o compartir búsquedas útiles. |
+| Source IP y Destination IP | Identificación de los actores. Sirve como punto de partida para pivotar, se puede verde que  Assets es la IP o buscar su actividad en Log Activity. |
 | Log Sources | Muestra todos los dispositivos. Permite auditados externamente para encontrar la causa raíz. |
 | Users | Muestra los usuarios de red que están asociados con las IP. Ayuda a determinar si el incidente es un ataque externo o interno. |
-| Contributing Events/Flows | Muestra los eventos y flujos. Es la evidencia principal revisando el timestamp y el payload de estos logs para confirmar la validez de la alerta. |
-| Assets Involved | Muestra los activos ue QRadar ha identificado como involucrados en la ofensa. Proporciona contexto del activo. |
-| Rule List (Lista de Reglas) | Muestra las reglas de correlación específicas que fueron violadas para generar la ofensa. |
-| Policy/Compliance | Muestra si la ofensa se relaciona con alguna política de cumplimiento. |
+| Flows | Muestra los eventos y flujos. Es la evidencia principal revisando el timestamp y el payload de estos logs para confirmar la validez de la alerta. |
+| Assets | Muestra los activos ue QRadar ha identificado como involucrados en la ofensa. Proporciona contexto del activo. |
+| Rule List | Muestra las reglas de correlación específicas que fueron violadas para generar la ofensa. |
+| Policy | Muestra si la ofensa se relaciona con alguna política de cumplimiento. |
 
 
