@@ -16,6 +16,7 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
   * [Integración de log source para la ingesta de Datos de Windows](#Integración-de-log-source-para-la-ingesta-de-Datos-de-windows)
   * [Integración de log source para la ingesta de Datos de Linux](#Integración-de-log-source-para-la-ingesta-de-Datos-de-Linux)
   * [Tratamiento de una Alerta](#Tratamiento-de-una-Alerta)
+  * [Creación de reporte](#Creación-de-reporte)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
@@ -235,5 +236,25 @@ Una vez que el usuario asignado accede a los detalles de la alerta, tiene a disp
 
 Para resolver y cerrar la alerta, simplemente en el desplegable acctions buscar la opción “close” resolviéndola con alguna de las opciones a elegir junto a una nota detallando la resolución.
 
+# Creación de reporte
+
+Los reportes cumplen la función de diseñar informes operativos detallados que le proporcionen la información necesaria para planificar y tomar decisiones rápidas sobre la seguridad de la red.
+
+La creación de reportes consta de 4 etapas: diseño, gráficos del informe, Programación un informe y Distribución.
+
+Primero hay que elegir la programación de reporte, luego el layout donde hay que elegir cuantos cuadros o bloques va a tener el reporte, con la cantidad elegida en el layout va a ser momento de seleccionar el contenido del reporte. Este cuenta de varias opciones las cuales hay que completar por cada bloque, estas son:
+
+| Sección | Propósito Principal |
+| --- | --- |
+| **Chart Title** | Asigna un nombre descriptivo al elemento de contenido. |
+| **Manual Scheduling** | Seguimiento de tiempo para el reporte. |
+| **Graph Content** | Define el tipo de visualización para los datos. |
+| **Saved Search** | Permite seleccionar una búsqueda previamente guardada para usar sus resultados como fuente de datos del contenedor. |
+| **Additional Details** | Muestra detalles adicionales como el tipo de gráfico o la cantidad máxima de eventos. |
+| **Response Details** | Opción que genera de ofenses forma interactiva dependiendo de las búsquedas que haga el reporte |
+
+luego de rellenar los bloques, se elige el formato para el reporte que por comodidad es preferible dejarla en formato PDF, luego la distribución que puede ser por mail o por la consola de reportes, seguido de la descripción del reporte y por último la confirmación para finalizar.
+
+Con esto es necesario dejar pasar 5 min aproximadamente y pasado este tiempo en la parte derecha, debajo de “formats” en la fila donde esté el reporte recién creado aparecerá un icono de PDF el cual te llevara al reporte generado.
 
 
