@@ -229,7 +229,7 @@ Una vez que el usuario asignado accede a los detalles de la alerta, tiene a disp
 | Log Sources | Muestra todos los dispositivos. Permite auditados externamente para encontrar la causa raíz. |
 | Users | Muestra los usuarios de red que están asociados con las IP. Ayuda a determinar si el incidente es un ataque externo o interno. |
 | Flows | Muestra los eventos y flujos. Es la evidencia principal revisando el timestamp y el payload de estos logs para confirmar la validez de la alerta. |
-| Assets | Muestra los activos ue QRadar ha identificado como involucrados en la ofensa. Proporciona contexto del activo. |
+| Assets | Muestra los activos que QRadar ha identificado como involucrados en la ofensa. Proporciona contexto del activo. |
 | Rule List | Muestra las reglas de correlación específicas que fueron violadas para generar la ofensa. |
 | Policy | Muestra si la ofensa se relaciona con alguna política de cumplimiento. |
 
