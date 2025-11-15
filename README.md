@@ -233,4 +233,7 @@ Una vez que el usuario asignado accede a los detalles de la alerta, tiene a disp
 | Rule List | Muestra las reglas de correlación específicas que fueron violadas para generar la ofensa. |
 | Policy | Muestra si la ofensa se relaciona con alguna política de cumplimiento. |
 
+Para resolver y cerrar la alerta, simplemente en el desplegable acctions buscar la opción “close” resolviéndola con alguna de las opciones a elegir junto a una nota detallando la resolución.
+
+
 
