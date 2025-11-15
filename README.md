@@ -17,6 +17,7 @@ QradarCE es la versión dedicada a la comunidad (community edition) de la plataf
   * [Integración de log source para la ingesta de Datos de Linux](#Integración-de-log-source-para-la-ingesta-de-Datos-de-Linux)
   * [Tratamiento de una Alerta](#Tratamiento-de-una-Alerta)
   * [Creación de reporte](#Creación-de-reporte)
+* [Conclusiones](#Conclusiones)
 
 # Descarga-Prerrequisitos-Instalación-Ejecución
 La descarga de la versión más reciente de IBM qradarCE se hace a través de la página principal de IBM, para esto primero es necesario crearse una cuenta en la plataforma para poder descargar el sistema. Una vez la cuenta esté creada hay que dirigirse a la página de [IBM Security QRadar](https://www.ibm.com/community/101/qradar/ce) y descargarlo desde el botón azul.
@@ -257,4 +258,6 @@ luego de rellenar los bloques, se elige el formato para el reporte que por comod
 
 Con esto es necesario dejar pasar 5 min aproximadamente y pasado este tiempo en la parte derecha, debajo de “formats” en la fila donde esté el reporte recién creado aparecerá un icono de PDF el cual te llevara al reporte generado.
 
+## Conclusiones
 
+Con esto vas a tener los conocimientos básicos de QradarCE. El propósito de este repositorio es poder aplicar los conocimientos de QradarCE de la forma más sencilla posible siendo lo mas fiel posible a su propia documentación.
